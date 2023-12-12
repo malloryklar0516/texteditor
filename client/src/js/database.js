@@ -20,7 +20,6 @@ export const putDb = async (content) => {
   const req = store.put({id: 1, value: content});
   const res = await req;
   console.log('data saved to jate database', res.value);
-  //console.error('putDb not implemented');}
 }
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
@@ -31,7 +30,7 @@ export const getDb = async () => {
   const req = store.get(1);
   const res = await req;
   console.log('res.value', res.value);
-  return res;
+  return res.value;
 };
 
 initdb();
